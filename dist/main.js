@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log({name:"Vitaliy",age:"37",language:"JavaScript",framework:"React"})})();

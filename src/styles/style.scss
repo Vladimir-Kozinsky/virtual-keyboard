@@ -1,0 +1,11 @@
+$primaryColor: blue;
+
+h1 {
+    color: $primaryColor;
+    font-family: Lora;
+}
+
+.container {
+    background: url(../img/donation-dog.jpg);
+    height: 500px;
+}
