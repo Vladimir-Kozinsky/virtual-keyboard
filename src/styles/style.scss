@@ -1,11 +1,14 @@
-$primaryColor: blue;
+.container {
+    margin: 10px auto;
+    max-width: 724px;
+    border: 1px solid red;
+    text-align: center;
+   
 
-h1 {
-    color: $primaryColor;
-    font-family: Lora;
 }
 
-.container {
-    background: url(../img/donation-dog.jpg);
-    height: 500px;
+.title {
+    color: rgba(101, 134, 177, 0.8);
+    font-size: 30px;
+    font-family: 'Trebuchet MS', sans-serif;
 }

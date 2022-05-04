@@ -1,1 +1,2 @@
-(()=>{"use strict";console.log({name:"Vitaliy",age:"37",language:"JavaScript",framework:"React"})})();
+(()=>{"use strict";document.createElement("div").className="container",console.log(document)})();
+//# sourceMappingURL=main.js.map

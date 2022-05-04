@@ -1,14 +1,19 @@
-import './styles/index.scss'
+import Keyboard from "./keyboard/keyboard";
+import "./styles/index.scss";
 
-const userStack = {
-    language: "JavaScript",
-    framework: "React"
+import Textarea from "./textarea/textarea";
+import Title from "./title/title";
+
+async function createContainer() {
+    let div = document.createElement("div");
+    div.className = "container";
+    div.append(Title()); // add title
+    div.append(Textarea()); // add textarea
+    let keyboard = await Keyboard();
+    div.append(keyboard);
+    document.body.append(div); // add keyboard
+    return;
 }
 
-const user = {
-    name: "Vitaliy",
-    age: "37",
-    ...userStack
-}
-
-console.log(user)
+createContainer();
+console.log(document);

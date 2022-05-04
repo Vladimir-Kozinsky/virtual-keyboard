@@ -1,0 +1,88 @@
+{
+    "keyboard": [
+        {
+            "id": "row-1", "keys": [
+                {"id": "key-`", "key": "`"},
+                {"id": "key-1", "key": "1"},
+                {"id": "key-2", "key": "2"},
+                {"id": "key-3", "key": "3"},
+                {"id": "key-4", "key": "4"},
+                {"id": "key-5", "key": "5"},
+                {"id": "key-6", "key": "6"},
+                {"id": "key-7", "key": "7"},
+                {"id": "key-8", "key": "8"},
+                {"id": "key-9", "key": "9"},
+                {"id": "key-0", "key": "0"},
+                {"id": "key--", "key": "-"},
+                {"id": "key-=", "key": "="},
+                {"id": "key-Backspase", "key": "Backspase"}
+            ]
+        },
+        {
+            "id": "row-2", "keys": [
+                {"id": "key-Tab", "key": "Tab"},
+                {"id": "key-q", "key": "q"},
+                {"id": "key-w", "key": "w"},
+                {"id": "key-e", "key": "e"},
+                {"id": "key-r", "key": "r"},
+                {"id": "key-t", "key": "t"},
+                {"id": "key-y", "key": "y"},
+                {"id": "key-u", "key": "u"},
+                {"id": "key-i", "key": "i"},
+                {"id": "key-o", "key": "o"},
+                {"id": "key-p", "key": "p"},
+                {"id": "key-[", "key": "["},
+                {"id": "key-]", "key": "]"},
+                {"id": "key-\\", "key": "\\"},
+                {"id": "key-Del", "key": "Del"}
+            ]
+        },
+        {
+            "id": "row-3", "keys": [
+                {"id": "key-CapsLock", "key": "CapsLock"},
+                {"id": "key-a", "key": "a"},
+                {"id": "key-s", "key": "s"},
+                {"id": "key-d", "key": "d"},
+                {"id": "key-f", "key": "f"},
+                {"id": "key-g", "key": "g"},
+                {"id": "key-h", "key": "h"},
+                {"id": "key-j", "key": "j"},
+                {"id": "key-k", "key": "k"},
+                {"id": "key-l", "key": "l"},
+                {"id": "key-;", "key": ";"},
+                {"id": "key-'", "key": "'"},
+                {"id": "key-Enter", "key": "Enter"}
+            ]
+        },
+        {
+            "id": "row-4", "keys": [
+                {"id": "key-Shift", "key": "Shift"},
+                {"id": "key-z", "key": "z"},
+                {"id": "key-x", "key": "x"},
+                {"id": "key-c", "key": "c"},
+                {"id": "key-v", "key": "v"},
+                {"id": "key-b", "key": "b"},
+                {"id": "key-n", "key": "n"},
+                {"id": "key-m", "key": "m"},
+                {"id": "key-,", "key": ","},
+                {"id": "key-.", "key": "."},
+                {"id": "key-/", "key": "/"},
+                {"id": "key-up", "key": "up"},
+                {"id": "key-Shift", "key": "Shift"}
+            ]
+        },
+        {
+            "id": "row-5", "keys": [
+                {"id": "key-Ctrl", "key": "Ctrl"},
+                {"id": "key-Win", "key": "Win"},
+                {"id": "key-Alt", "key": "Alt"},
+                {"id": "key-Space", "key": ""},
+                {"id": "key-Alt", "key": "Alt"},
+                {"id": "key-left", "key": "left"},
+                {"id": "key-down", "key": "down "},
+                {"id": "key-right", "key": "right"},
+                {"id": "key-Ctrl", "key": "Ctrl"}
+            ]
+        }
+    ]
+}

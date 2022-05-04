@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 let mode = 'development'
 if (process.env.NODE_ENV === 'production') {
@@ -21,17 +22,19 @@ module.exports = {
     },
     devtool: 'source-map',
     plugins: [
+
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             template: "./src/index.html"
-        })
+        }),
+        new ESLintPlugin()
     ],
     module: {
         rules: [
-            {
-                test: /\.html$/i,
-                loader: "html-loader",
-            },
+            // {
+            //     test: /\.html$/i,
+            //     loader: "html-loader",
+            // },
             {
                 test: /\.(png)$/i,
                 type: 'asset/resource',
