@@ -5,7 +5,8 @@ import Textarea from "./textarea/textarea";
 import Title from "./title/title";
 
 let isCapsLock = false;
-
+let lang = "EN";
+let isShift = false;
 
 async function createContainer() {
     let div = document.createElement("div");
@@ -20,11 +21,23 @@ async function createContainer() {
 
 createContainer();
 
-
-
 document.addEventListener("keydown", function (event) {
+    const textarea = document.querySelector(".textarea");
     const btn = Array.from(document.querySelectorAll(".btn"));
     let curBtn = btn.find((item) => item.id === event.code);
+
+
+    if (curBtn.id[0] === "K" && curBtn.id[1] === "e"
+        || curBtn.id[0] === "D" && curBtn.id[1] === "i"
+        || curBtn.id === "Backquote" || curBtn.id === "Minus" || curBtn.id === "Equal"
+        || curBtn.id === "BracketLeft" || curBtn.id === "BracketRight"
+        || curBtn.id === "Backslash" || curBtn.id === "Semicolon" || curBtn.id === "Quote"
+        || curBtn.id === "Comma" || curBtn.id === "Period" || curBtn.id === "Slash") {
+        event.preventDefault();
+        textarea.value += curBtn.textContent;
+    }
+
+
 
     if (curBtn.id === "CapsLock") {
         if (!isCapsLock) {
@@ -36,22 +49,45 @@ document.addEventListener("keydown", function (event) {
             curBtn.classList.remove("active");
             updateKeyboard(isCapsLock);
         }
-
-
-    } else if (curBtn.id === "ShiftLeft") {
-        curBtn.classList.add("active");
-        shiftPush(true);
-        document.addEventListener("keyup", () => {
-            curBtn.classList.remove("active");
-            shiftPush(false);
-        });
-
     } else {
         curBtn.classList.add("active");
-        document.addEventListener("keyup", () => {
-            curBtn.classList.remove("active");
-        });
     }
 
+
+    if (curBtn.id === "ShiftLeft" || curBtn.id === "ShiftRight") {
+        curBtn.classList.add("active");
+        isCapsLock ? shiftPush(false, lang) : shiftPush(true, lang);
+
+        isShift = true;
+    }
+
+    if (isShift && curBtn.id === "AltLeft") {
+        if (lang === "EN") {
+            lang = "RU";
+        } else {
+            lang = "EN";
+        }
+        console.log(lang);
+    }
+
+
+
+
+
+
 });
+
+document.addEventListener("keyup", (event) => {
+    const btn = Array.from(document.querySelectorAll(".btn"));
+    let curBtn = btn.find((item) => item.id === event.code);
+    if (curBtn.id === "ShiftLeft" || curBtn.id === "ShiftRight") {
+        curBtn.classList.remove("active");
+        isCapsLock ? shiftPush(true, lang) : shiftPush(false, lang);
+        isShift = false;
+    }
+    if (curBtn.id !== "CapsLock") {
+        curBtn.classList.remove("active");
+    }
+});
+
 

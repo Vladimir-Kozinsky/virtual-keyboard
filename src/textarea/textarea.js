@@ -3,6 +3,7 @@ const Textarea = () => {
     textarea.className = "textarea";
     textarea.setAttribute("rows", "50");
     textarea.setAttribute("cols", "50");
+   // textarea.setAttribute("readonly", "true");
     return textarea;
 };
 

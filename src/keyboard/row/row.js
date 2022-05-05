@@ -11,9 +11,16 @@ export const updateKeyboard = (isCapsLock) => {
     });
 };
 
-export const shiftPush = async (isPush) => {
+
+export const shiftPush = async (isPush, lang) => {
     let keyboard = await getData();
-    let data = isPush ? keyboard.keyboardUpper : keyboard.keyboard;
+    let data = isPush
+        ? lang === "EN"
+            ? keyboard.keyboardUpper
+            : keyboard.keyboardRuUpper
+        : lang === "RU"
+            ? keyboard.keyboardRu
+            : keyboard.keyboard;
     data.map((row) => {
         row.keys.map((item) => {
             let btn = document.getElementById(item.id);
