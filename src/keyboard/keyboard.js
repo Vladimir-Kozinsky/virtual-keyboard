@@ -7,11 +7,12 @@ export const getData = async () => {
 };
 
 
-const Keyboard = async () => {
+const Keyboard = async (lang) => {
     let keyboard = document.createElement("div");
     keyboard.className = "keyboard";
     let rows = await getData();
-    rows.keyboard.map((row) => {
+    let layout = lang === "EN" ? rows.keyboard : rows.keyboardRu;
+    layout.map((row) => {
         keyboard.append(Row(row.keys));
     });
     return keyboard;
