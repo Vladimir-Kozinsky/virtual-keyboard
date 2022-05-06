@@ -1,0 +1,1134 @@
+{
+    "keyboard": [
+        {
+            "id": "row-1",
+            "keys": [
+                {
+                    "id": "Backquote",
+                    "key": "`"
+                },
+                {
+                    "id": "Digit1",
+                    "key": "1"
+                },
+                {
+                    "id": "Digit2",
+                    "key": "2"
+                },
+                {
+                    "id": "Digit3",
+                    "key": "3"
+                },
+                {
+                    "id": "Digit4",
+                    "key": "4"
+                },
+                {
+                    "id": "Digit5",
+                    "key": "5"
+                },
+                {
+                    "id": "Digit6",
+                    "key": "6"
+                },
+                {
+                    "id": "Digit7",
+                    "key": "7"
+                },
+                {
+                    "id": "Digit8",
+                    "key": "8"
+                },
+                {
+                    "id": "Digit9",
+                    "key": "9"
+                },
+                {
+                    "id": "Digit0",
+                    "key": "0"
+                },
+                {
+                    "id": "Minus",
+                    "key": "-"
+                },
+                {
+                    "id": "Equal",
+                    "key": "="
+                },
+                {
+                    "id": "Backspace",
+                    "key": "Backspase"
+                }
+            ]
+        },
+        {
+            "id": "row-2",
+            "keys": [
+                {
+                    "id": "Tab",
+                    "key": "Tab"
+                },
+                {
+                    "id": "KeyQ",
+                    "key": "q"
+                },
+                {
+                    "id": "KeyW",
+                    "key": "w"
+                },
+                {
+                    "id": "KeyE",
+                    "key": "e"
+                },
+                {
+                    "id": "KeyR",
+                    "key": "r"
+                },
+                {
+                    "id": "KeyT",
+                    "key": "t"
+                },
+                {
+                    "id": "KeyY",
+                    "key": "y"
+                },
+                {
+                    "id": "KeyU",
+                    "key": "u"
+                },
+                {
+                    "id": "KeyI",
+                    "key": "i"
+                },
+                {
+                    "id": "KeyO",
+                    "key": "o"
+                },
+                {
+                    "id": "KeyP",
+                    "key": "p"
+                },
+                {
+                    "id": "BracketLeft",
+                    "key": "["
+                },
+                {
+                    "id": "BracketRight",
+                    "key": "]"
+                },
+                {
+                    "id": "Backslash",
+                    "key": "\\"
+                },
+                {
+                    "id": "Delete",
+                    "key": "Del"
+                }
+            ]
+        },
+        {
+            "id": "row-3",
+            "keys": [
+                {
+                    "id": "CapsLock",
+                    "key": "CapsLock"
+                },
+                {
+                    "id": "KeyA",
+                    "key": "a"
+                },
+                {
+                    "id": "KeyS",
+                    "key": "s"
+                },
+                {
+                    "id": "KeyD",
+                    "key": "d"
+                },
+                {
+                    "id": "KeyF",
+                    "key": "f"
+                },
+                {
+                    "id": "KeyG",
+                    "key": "g"
+                },
+                {
+                    "id": "KeyH",
+                    "key": "h"
+                },
+                {
+                    "id": "KeyJ",
+                    "key": "j"
+                },
+                {
+                    "id": "KeyK",
+                    "key": "k"
+                },
+                {
+                    "id": "KeyL",
+                    "key": "l"
+                },
+                {
+                    "id": "Semicolon",
+                    "key": ";"
+                },
+                {
+                    "id": "Quote",
+                    "key": "'"
+                },
+                {
+                    "id": "Enter",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "id": "row-4",
+            "keys": [
+                {
+                    "id": "ShiftLeft",
+                    "key": "Shift"
+                },
+                {
+                    "id": "KeyZ",
+                    "key": "z"
+                },
+                {
+                    "id": "KeyX",
+                    "key": "x"
+                },
+                {
+                    "id": "KeyC",
+                    "key": "c"
+                },
+                {
+                    "id": "KeyV",
+                    "key": "v"
+                },
+                {
+                    "id": "KeyB",
+                    "key": "b"
+                },
+                {
+                    "id": "KeyN",
+                    "key": "n"
+                },
+                {
+                    "id": "KeyM",
+                    "key": "m"
+                },
+                {
+                    "id": "Comma",
+                    "key": ","
+                },
+                {
+                    "id": "Period",
+                    "key": "."
+                },
+                {
+                    "id": "Slash",
+                    "key": "/"
+                },
+                {
+                    "id": "ArrowUp",
+                    "key": "▲"
+                },
+                {
+                    "id": "ShiftRight",
+                    "key": "Shift"
+                }
+            ]
+        },
+        {
+            "id": "row-5",
+            "keys": [
+                {
+                    "id": "ControlLeft",
+                    "key": "Ctrl"
+                },
+                {
+                    "id": "MetaLeft",
+                    "key": "Win"
+                },
+                {
+                    "id": "AltLeft",
+                    "key": "Alt"
+                },
+                {
+                    "id": "Space",
+                    "key": ""
+                },
+                {
+                    "id": "AltRight",
+                    "key": "Alt"
+                },
+                {
+                    "id": "ArrowLeft",
+                    "key": "◄"
+                },
+                {
+                    "id": "ArrowDown",
+                    "key": "▼"
+                },
+                {
+                    "id": "ArrowRight",
+                    "key": "►"
+                },
+                {
+                    "id": "ControlRight",
+                    "key": "Ctrl"
+                }
+            ]
+        }
+    ],
+    "keyboardUpper": [
+        {
+            "id": "row-1",
+            "keys": [
+                {
+                    "id": "Backquote",
+                    "key": "~"
+                },
+                {
+                    "id": "Digit1",
+                    "key": "!"
+                },
+                {
+                    "id": "Digit2",
+                    "key": "@"
+                },
+                {
+                    "id": "Digit3",
+                    "key": "#"
+                },
+                {
+                    "id": "Digit4",
+                    "key": "$"
+                },
+                {
+                    "id": "Digit5",
+                    "key": "%"
+                },
+                {
+                    "id": "Digit6",
+                    "key": "^"
+                },
+                {
+                    "id": "Digit7",
+                    "key": "&"
+                },
+                {
+                    "id": "Digit8",
+                    "key": "*"
+                },
+                {
+                    "id": "Digit9",
+                    "key": "("
+                },
+                {
+                    "id": "Digit0",
+                    "key": ")"
+                },
+                {
+                    "id": "Minus",
+                    "key": "_"
+                },
+                {
+                    "id": "Equal",
+                    "key": "+"
+                },
+                {
+                    "id": "Backspace",
+                    "key": "Backspase"
+                }
+            ]
+        },
+        {
+            "id": "row-2",
+            "keys": [
+                {
+                    "id": "Tab",
+                    "key": "Tab"
+                },
+                {
+                    "id": "KeyQ",
+                    "key": "Q"
+                },
+                {
+                    "id": "KeyW",
+                    "key": "W"
+                },
+                {
+                    "id": "KeyE",
+                    "key": "E"
+                },
+                {
+                    "id": "KeyR",
+                    "key": "R"
+                },
+                {
+                    "id": "KeyT",
+                    "key": "T"
+                },
+                {
+                    "id": "KeyY",
+                    "key": "Y"
+                },
+                {
+                    "id": "KeyU",
+                    "key": "U"
+                },
+                {
+                    "id": "KeyI",
+                    "key": "I"
+                },
+                {
+                    "id": "KeyO",
+                    "key": "O"
+                },
+                {
+                    "id": "KeyP",
+                    "key": "P"
+                },
+                {
+                    "id": "BracketLeft",
+                    "key": "{"
+                },
+                {
+                    "id": "BracketRight",
+                    "key": "}"
+                },
+                {
+                    "id": "Backslash",
+                    "key": "|"
+                },
+                {
+                    "id": "Delete",
+                    "key": "Del"
+                }
+            ]
+        },
+        {
+            "id": "row-3",
+            "keys": [
+                {
+                    "id": "CapsLock",
+                    "key": "CapsLock"
+                },
+                {
+                    "id": "KeyA",
+                    "key": "A"
+                },
+                {
+                    "id": "KeyS",
+                    "key": "S"
+                },
+                {
+                    "id": "KeyD",
+                    "key": "D"
+                },
+                {
+                    "id": "KeyF",
+                    "key": "F"
+                },
+                {
+                    "id": "KeyG",
+                    "key": "G"
+                },
+                {
+                    "id": "KeyH",
+                    "key": "H"
+                },
+                {
+                    "id": "KeyJ",
+                    "key": "J"
+                },
+                {
+                    "id": "KeyK",
+                    "key": "K"
+                },
+                {
+                    "id": "KeyL",
+                    "key": "L"
+                },
+                {
+                    "id": "Semicolon",
+                    "key": ":"
+                },
+                {
+                    "id": "Quote",
+                    "key": "\""
+                },
+                {
+                    "id": "Enter",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "id": "row-4",
+            "keys": [
+                {
+                    "id": "ShiftLeft",
+                    "key": "Shift"
+                },
+                {
+                    "id": "KeyZ",
+                    "key": "Z"
+                },
+                {
+                    "id": "KeyX",
+                    "key": "X"
+                },
+                {
+                    "id": "KeyC",
+                    "key": "C"
+                },
+                {
+                    "id": "KeyV",
+                    "key": "V"
+                },
+                {
+                    "id": "KeyB",
+                    "key": "B"
+                },
+                {
+                    "id": "KeyN",
+                    "key": "N"
+                },
+                {
+                    "id": "KeyM",
+                    "key": "M"
+                },
+                {
+                    "id": "Comma",
+                    "key": "<"
+                },
+                {
+                    "id": "Period",
+                    "key": ">"
+                },
+                {
+                    "id": "Slash",
+                    "key": "?"
+                },
+                {
+                    "id": "ArrowUp",
+                    "key": "▲"
+                },
+                {
+                    "id": "ShiftRight",
+                    "key": "Shift"
+                }
+            ]
+        },
+        {
+            "id": "row-5",
+            "keys": [
+                {
+                    "id": "ControlLeft",
+                    "key": "Ctrl"
+                },
+                {
+                    "id": "MetaLeft",
+                    "key": "Win"
+                },
+                {
+                    "id": "AltLeft",
+                    "key": "Alt"
+                },
+                {
+                    "id": "Space",
+                    "key": ""
+                },
+                {
+                    "id": "AltRight",
+                    "key": "Alt"
+                },
+                {
+                    "id": "ArrowLeft",
+                    "key": "◄"
+                },
+                {
+                    "id": "ArrowDown",
+                    "key": "▼"
+                },
+                {
+                    "id": "ArrowRight",
+                    "key": "►"
+                },
+                {
+                    "id": "ControlRight",
+                    "key": "Ctrl"
+                }
+            ]
+        }
+    ],
+    "keyboardRu": [
+        {
+            "id": "row-1",
+            "keys": [
+                {
+                    "id": "Backquote",
+                    "key": "ё"
+                },
+                {
+                    "id": "Digit1",
+                    "key": "1"
+                },
+                {
+                    "id": "Digit2",
+                    "key": "2"
+                },
+                {
+                    "id": "Digit3",
+                    "key": "3"
+                },
+                {
+                    "id": "Digit4",
+                    "key": "4"
+                },
+                {
+                    "id": "Digit5",
+                    "key": "5"
+                },
+                {
+                    "id": "Digit6",
+                    "key": "6"
+                },
+                {
+                    "id": "Digit7",
+                    "key": "7"
+                },
+                {
+                    "id": "Digit8",
+                    "key": "8"
+                },
+                {
+                    "id": "Digit9",
+                    "key": "9"
+                },
+                {
+                    "id": "Digit0",
+                    "key": "0"
+                },
+                {
+                    "id": "Minus",
+                    "key": "-"
+                },
+                {
+                    "id": "Equal",
+                    "key": "="
+                },
+                {
+                    "id": "Backspace",
+                    "key": "Backspase"
+                }
+            ]
+        },
+        {
+            "id": "row-2",
+            "keys": [
+                {
+                    "id": "Tab",
+                    "key": "Tab"
+                },
+                {
+                    "id": "KeyQ",
+                    "key": "й"
+                },
+                {
+                    "id": "KeyW",
+                    "key": "ц"
+                },
+                {
+                    "id": "KeyE",
+                    "key": "у"
+                },
+                {
+                    "id": "KeyR",
+                    "key": "к"
+                },
+                {
+                    "id": "KeyT",
+                    "key": "е"
+                },
+                {
+                    "id": "KeyY",
+                    "key": "н"
+                },
+                {
+                    "id": "KeyU",
+                    "key": "г"
+                },
+                {
+                    "id": "KeyI",
+                    "key": "ш"
+                },
+                {
+                    "id": "KeyO",
+                    "key": "щ"
+                },
+                {
+                    "id": "KeyP",
+                    "key": "з"
+                },
+                {
+                    "id": "BracketLeft",
+                    "key": "х"
+                },
+                {
+                    "id": "BracketRight",
+                    "key": "ъ"
+                },
+                {
+                    "id": "Backslash",
+                    "key": "|"
+                },
+                {
+                    "id": "Delete",
+                    "key": "Del"
+                }
+            ]
+        },
+        {
+            "id": "row-3",
+            "keys": [
+                {
+                    "id": "CapsLock",
+                    "key": "CapsLock"
+                },
+                {
+                    "id": "KeyA",
+                    "key": "ф"
+                },
+                {
+                    "id": "KeyS",
+                    "key": "ы"
+                },
+                {
+                    "id": "KeyD",
+                    "key": "в"
+                },
+                {
+                    "id": "KeyF",
+                    "key": "а"
+                },
+                {
+                    "id": "KeyG",
+                    "key": "п"
+                },
+                {
+                    "id": "KeyH",
+                    "key": "р"
+                },
+                {
+                    "id": "KeyJ",
+                    "key": "о"
+                },
+                {
+                    "id": "KeyK",
+                    "key": "л"
+                },
+                {
+                    "id": "KeyL",
+                    "key": "д"
+                },
+                {
+                    "id": "Semicolon",
+                    "key": "ж"
+                },
+                {
+                    "id": "Quote",
+                    "key": "э"
+                },
+                {
+                    "id": "Enter",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "id": "row-4",
+            "keys": [
+                {
+                    "id": "ShiftLeft",
+                    "key": "Shift"
+                },
+                {
+                    "id": "KeyZ",
+                    "key": "я"
+                },
+                {
+                    "id": "KeyX",
+                    "key": "ч"
+                },
+                {
+                    "id": "KeyC",
+                    "key": "с"
+                },
+                {
+                    "id": "KeyV",
+                    "key": "м"
+                },
+                {
+                    "id": "KeyB",
+                    "key": "и"
+                },
+                {
+                    "id": "KeyN",
+                    "key": "т"
+                },
+                {
+                    "id": "KeyM",
+                    "key": "ь"
+                },
+                {
+                    "id": "Comma",
+                    "key": "б"
+                },
+                {
+                    "id": "Period",
+                    "key": "ю"
+                },
+                {
+                    "id": "Slash",
+                    "key": "."
+                },
+                {
+                    "id": "ArrowUp",
+                    "key": "▲"
+                },
+                {
+                    "id": "ShiftRight",
+                    "key": "Shift"
+                }
+            ]
+        },
+        {
+            "id": "row-5",
+            "keys": [
+                {
+                    "id": "ControlLeft",
+                    "key": "Ctrl"
+                },
+                {
+                    "id": "MetaLeft",
+                    "key": "Win"
+                },
+                {
+                    "id": "AltLeft",
+                    "key": "Alt"
+                },
+                {
+                    "id": "Space",
+                    "key": ""
+                },
+                {
+                    "id": "AltRight",
+                    "key": "Alt"
+                },
+                {
+                    "id": "ArrowLeft",
+                    "key": "◄"
+                },
+                {
+                    "id": "ArrowDown",
+                    "key": "▼"
+                },
+                {
+                    "id": "ArrowRight",
+                    "key": "►"
+                },
+                {
+                    "id": "ControlRight",
+                    "key": "Ctrl"
+                }
+            ]
+        }
+    ],
+    "keyboardRuUpper": [
+        {
+            "id": "row-1",
+            "keys": [
+                {
+                    "id": "Backquote",
+                    "key": "Ё"
+                },
+                {
+                    "id": "Digit1",
+                    "key": "!"
+                },
+                {
+                    "id": "Digit2",
+                    "key": "\""
+                },
+                {
+                    "id": "Digit3",
+                    "key": "№"
+                },
+                {
+                    "id": "Digit4",
+                    "key": ";"
+                },
+                {
+                    "id": "Digit5",
+                    "key": "%"
+                },
+                {
+                    "id": "Digit6",
+                    "key": ":"
+                },
+                {
+                    "id": "Digit7",
+                    "key": "?"
+                },
+                {
+                    "id": "Digit8",
+                    "key": "*"
+                },
+                {
+                    "id": "Digit9",
+                    "key": "("
+                },
+                {
+                    "id": "Digit0",
+                    "key": ")"
+                },
+                {
+                    "id": "Minus",
+                    "key": "_"
+                },
+                {
+                    "id": "Equal",
+                    "key": "+"
+                },
+                {
+                    "id": "Backspace",
+                    "key": "Backspase"
+                }
+            ]
+        },
+        {
+            "id": "row-2",
+            "keys": [
+                {
+                    "id": "Tab",
+                    "key": "Tab"
+                },
+                {
+                    "id": "KeyQ",
+                    "key": "Й"
+                },
+                {
+                    "id": "KeyW",
+                    "key": "Ц"
+                },
+                {
+                    "id": "KeyE",
+                    "key": "У"
+                },
+                {
+                    "id": "KeyR",
+                    "key": "К"
+                },
+                {
+                    "id": "KeyT",
+                    "key": "Е"
+                },
+                {
+                    "id": "KeyY",
+                    "key": "Н"
+                },
+                {
+                    "id": "KeyU",
+                    "key": "Г"
+                },
+                {
+                    "id": "KeyI",
+                    "key": "Ш"
+                },
+                {
+                    "id": "KeyO",
+                    "key": "Щ"
+                },
+                {
+                    "id": "KeyP",
+                    "key": "З"
+                },
+                {
+                    "id": "BracketLeft",
+                    "key": "Х"
+                },
+                {
+                    "id": "BracketRight",
+                    "key": "Ъ"
+                },
+                {
+                    "id": "Backslash",
+                    "key": "|"
+                },
+                {
+                    "id": "Delete",
+                    "key": "Del"
+                }
+            ]
+        },
+        {
+            "id": "row-3",
+            "keys": [
+                {
+                    "id": "CapsLock",
+                    "key": "CapsLock"
+                },
+                {
+                    "id": "KeyA",
+                    "key": "Ф"
+                },
+                {
+                    "id": "KeyS",
+                    "key": "Ы"
+                },
+                {
+                    "id": "KeyD",
+                    "key": "В"
+                },
+                {
+                    "id": "KeyF",
+                    "key": "А"
+                },
+                {
+                    "id": "KeyG",
+                    "key": "П"
+                },
+                {
+                    "id": "KeyH",
+                    "key": "Р"
+                },
+                {
+                    "id": "KeyJ",
+                    "key": "О"
+                },
+                {
+                    "id": "KeyK",
+                    "key": "Л"
+                },
+                {
+                    "id": "KeyL",
+                    "key": "Д"
+                },
+                {
+                    "id": "Semicolon",
+                    "key": "Ж"
+                },
+                {
+                    "id": "Quote",
+                    "key": "Э"
+                },
+                {
+                    "id": "Enter",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "id": "row-4",
+            "keys": [
+                {
+                    "id": "ShiftLeft",
+                    "key": "Shift"
+                },
+                {
+                    "id": "KeyZ",
+                    "key": "Я"
+                },
+                {
+                    "id": "KeyX",
+                    "key": "Ч"
+                },
+                {
+                    "id": "KeyC",
+                    "key": "С"
+                },
+                {
+                    "id": "KeyV",
+                    "key": "М"
+                },
+                {
+                    "id": "KeyB",
+                    "key": "И"
+                },
+                {
+                    "id": "KeyN",
+                    "key": "Т"
+                },
+                {
+                    "id": "KeyM",
+                    "key": "Ь"
+                },
+                {
+                    "id": "Comma",
+                    "key": "Б"
+                },
+                {
+                    "id": "Period",
+                    "key": "Ю"
+                },
+                {
+                    "id": "Slash",
+                    "key": ","
+                },
+                {
+                    "id": "ArrowUp",
+                    "key": "▲"
+                },
+                {
+                    "id": "ShiftRight",
+                    "key": "Shift"
+                }
+            ]
+        },
+        {
+            "id": "row-5",
+            "keys": [
+                {
+                    "id": "ControlLeft",
+                    "key": "Ctrl"
+                },
+                {
+                    "id": "MetaLeft",
+                    "key": "Win"
+                },
+                {
+                    "id": "AltLeft",
+                    "key": "Alt"
+                },
+                {
+                    "id": "Space",
+                    "key": ""
+                },
+                {
+                    "id": "AltRight",
+                    "key": "Alt"
+                },
+                {
+                    "id": "ArrowLeft",
+                    "key": "◄"
+                },
+                {
+                    "id": "ArrowDown",
+                    "key": "▼"
+                },
+                {
+                    "id": "ArrowRight",
+                    "key": "►"
+                },
+                {
+                    "id": "ControlRight",
+                    "key": "Ctrl"
+                }
+            ]
+        }
+    ]
+}

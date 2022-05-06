@@ -1,0 +1,85 @@
+%blackbtn {
+    font-weight: 600;
+    background-color: #222222;
+}
+%greyBtn {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.btn {
+    display: block;
+    @extend %greyBtn;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    margin-left: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    &:hover {
+        background: #79aa89;
+        cursor: pointer;
+    }
+    &:active {
+        background: #23f368;
+        border-radius: 50px;
+    }
+    &.active {
+        background: #23f368;
+        border-radius: 50px;
+    }
+    &.backspace {
+        width: 100px;
+        @extend %blackbtn;
+    }
+    &.tab {
+        width: 50px;
+        @extend %blackbtn;
+    }
+
+    &.Delete {
+        width: 44px;
+        @extend %blackbtn;
+    }
+
+    &.capsLock {
+        width: 100px;
+        @extend %blackbtn;
+    }
+
+    &.enter {
+        width: 86px;
+        @extend %blackbtn;
+    }
+    &.shiftLeft {
+        width: 100px;
+        @extend %blackbtn;
+    }
+    &.shiftRight {
+        width: 86px;
+        @extend %blackbtn;
+    }
+    &.space {
+        width: 330px;
+    }
+    &.controlLeft,
+    &.controlRight,
+    &.altLeft,
+    &.altRight,
+    &.metaLeft,
+    &.arrowLeft,
+    &.arrowRight,
+    &.arrowDown,
+    &.arrowUp {
+        @extend %blackbtn;
+    }
+}
