@@ -3,6 +3,7 @@ import { shiftPush, updateKeyboard } from "./keyboard/row/row";
 import "./styles/index.scss";
 import Textarea from "./textarea/textarea";
 import Title from "./title/title";
+//import svg from "../src/img/keyb.svg";
 
 let isCapsLock = false;
 let lang = "EN";
@@ -14,7 +15,6 @@ window.onload = function () {
 
     if (localStLang) {
         lang = localStLang;
-        console.log(lang);
     }
 };
 
@@ -23,6 +23,12 @@ window.onload();
 
 async function createContainer() {
     let div = document.createElement("div");
+    // let link = document.createElement("link");
+    // let head = document.querySelector("head");
+    // link.setAttribute("rel", "icon");
+    // link.setAttribute("type", "image/x-icon");
+    // link.setAttribute("href", svg);
+    // head.append(link); // add favicon
     div.className = "container";
     div.append(Title()); // add title
     div.append(Textarea()); // add textarea
@@ -113,15 +119,14 @@ document.addEventListener("keyup", (event) => {
 
 setTimeout(() => {
     let textarea = document.querySelector(".textarea");
-            textarea.addEventListener("click", ()=> {
-                console.log(textarea);
-            });
+    textarea.addEventListener("click", () => {
+        console.log(textarea);
+    });
     btnsArr.map((btn) => {
         btn.addEventListener("click", () => {
             let textarea = document.querySelector(".textarea");
-            
-            console.log(textarea);
-            textarea.checked = "true";
+            textarea.focus();
+            let curPosition = textarea.selectionStart;
             if (btn && btn.id[0] === "K" && btn.id[1] === "e"
                 || btn.id[0] === "D" && btn.id[1] === "i"
                 || btn.id === "Backquote" || btn.id === "Minus" || btn.id === "Equal"
@@ -130,11 +135,33 @@ setTimeout(() => {
                 || btn.id === "Comma" || btn.id === "Period" || btn.id === "Slash") {
                 textarea.value += btn.textContent;
             } else if (btn.id === "Backspace") {
-                textarea.value = textarea.value.slice(0, textarea.value.length - 1);
+                if (curPosition > 0) {
+                    textarea.value = textarea.value.slice(0, curPosition - 1) + textarea.value.slice(curPosition, textarea.length);
+                    textarea.setSelectionRange(curPosition - 1, curPosition - 1);
+                }
+
             } else if (btn.id === "Delete") {
-                textarea.wrap = "virtual";
-                textarea.value = textarea.value.slice(1, textarea.value.length);
+
+                textarea.value = textarea.value.slice(0, curPosition) + textarea.value.slice(curPosition + 1, textarea.length);
+                textarea.setSelectionRange(curPosition, curPosition);
+            } else if (btn.id === "Enter") {
+                textarea.value += "\n";
+                // let colsQuantity = textarea.cols;
+                // let curPosition = textarea.selectionStart;
+                // console.log(colsQuantity, curPosition);
+                //textarea.setSelectionRange(0,0);
+            } else if (btn.id === "CapsLock") {
+                if (!isCapsLock) {
+                    isCapsLock = true;
+                    btn.classList.add("active");
+                    updateKeyboard(isCapsLock);
+                } else {
+                    isCapsLock = false;
+                    btn.classList.remove("active");
+                    updateKeyboard(isCapsLock);
+                }
             }
+
         });
     });
 }, 1000);
