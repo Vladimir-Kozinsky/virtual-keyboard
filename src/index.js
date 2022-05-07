@@ -20,6 +20,15 @@ window.onload = function () {
 
 window.onload();
 
+const createHTMLTree = () => {
+    let html = document.querySelector("html");
+    html.setAttribute("lang", "en");
+};
+
+createHTMLTree();
+
+
+
 
 async function createContainer() {
     let div = document.createElement("div");
@@ -120,11 +129,11 @@ document.addEventListener("keyup", (event) => {
 setTimeout(() => {
     let textarea = document.querySelector(".textarea");
     textarea.addEventListener("click", () => {
-        console.log(textarea);
     });
     btnsArr.map((btn) => {
         btn.addEventListener("click", () => {
             let textarea = document.querySelector(".textarea");
+            console.log(textarea);
             textarea.focus();
             let curPosition = textarea.selectionStart;
             if (btn && btn.id[0] === "K" && btn.id[1] === "e"
@@ -132,7 +141,8 @@ setTimeout(() => {
                 || btn.id === "Backquote" || btn.id === "Minus" || btn.id === "Equal"
                 || btn.id === "BracketLeft" || btn.id === "BracketRight"
                 || btn.id === "Backslash" || btn.id === "Semicolon" || btn.id === "Quote"
-                || btn.id === "Comma" || btn.id === "Period" || btn.id === "Slash") {
+                || btn.id === "Comma" || btn.id === "Period" || btn.id === "Slash" || btn.id === "ArrowLeft" 
+                || btn.id === "ArrowRight" || btn.id === "ArrowUp" || btn.id === "ArrowDown") {
                 textarea.value += btn.textContent;
             } else if (btn.id === "Backspace") {
                 if (curPosition > 0) {
@@ -161,6 +171,22 @@ setTimeout(() => {
                     updateKeyboard(isCapsLock);
                 }
             }
+            //else if (btn.id === "ArrowRight") {
+            //     textarea.setSelectionRange(curPosition + 1, curPosition + 1);
+            // } else if (btn.id === "ArrowLeft") {
+            //     if (curPosition > 0) {
+            //         textarea.setSelectionRange(curPosition - 1, curPosition - 1);
+            //     }
+            // } else if (btn.id === "ArrowUp") {
+            //     let rowsQuantity = textarea.value.split("\n");
+            //     if (curPosition > 0 && rowsQuantity.length === 1) {
+            //         textarea.setSelectionRange(0, 0);
+            //     }
+
+            //     if (curPosition > rowsQuantity[0].length && rowsQuantity.length > 1) {
+            //         textarea.setSelectionRange(5, 5);
+            //     }
+            // }
 
         });
     });
