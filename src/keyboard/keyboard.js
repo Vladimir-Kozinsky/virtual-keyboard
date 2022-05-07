@@ -1,7 +1,7 @@
 import Row from "./row/row";
 
 export const getData = async () => {
-    let response = await fetch("/keyboard/keyboard.json");
+    let response = await fetch("./keyboard.json");
     let payload = await response.json();
     return payload;
 };
