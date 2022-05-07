@@ -3,7 +3,7 @@ import { shiftPush, updateKeyboard } from "./keyboard/row/row";
 import "./styles/index.scss";
 import Textarea from "./textarea/textarea";
 import Title from "./title/title";
-//import svg from "../src/img/keyb.svg";
+import svg from "../src/img/keyb.svg";
 
 let isCapsLock = false;
 let lang = "EN";
@@ -23,21 +23,24 @@ window.onload();
 const createHTMLTree = () => {
     let html = document.querySelector("html");
     html.setAttribute("lang", "en");
+    let head = document.querySelector("head");
+    let linkStyle = document.createElement("link");
+    linkStyle.setAttribute("href", "main.css");
+    linkStyle.setAttribute("rel", "stylesheet");
+    head.append(linkStyle);
+    let link = document.createElement("link");
+    link.setAttribute("rel", "icon");
+    link.setAttribute("type", "image/x-icon");
+    link.setAttribute("href", svg);
+    head.append(link); // add favicon
 };
 
 createHTMLTree();
 
-
-
-
 async function createContainer() {
     let div = document.createElement("div");
-    // let link = document.createElement("link");
-    // let head = document.querySelector("head");
-    // link.setAttribute("rel", "icon");
-    // link.setAttribute("type", "image/x-icon");
-    // link.setAttribute("href", svg);
-    // head.append(link); // add favicon
+
+
     div.className = "container";
     div.append(Title()); // add title
     div.append(Textarea()); // add textarea
