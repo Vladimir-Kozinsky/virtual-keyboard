@@ -78,7 +78,17 @@ document.addEventListener("keydown", function (event) {
         || curBtn.id === "Backslash" || curBtn.id === "Semicolon" || curBtn.id === "Quote"
         || curBtn.id === "Comma" || curBtn.id === "Period" || curBtn.id === "Slash") {
         event.preventDefault();
-        textarea.value += curBtn.textContent;
+        let curPosition = textarea.selectionStart;
+
+        if (curPosition === textarea.value.length) {
+            textarea.value += curBtn.textContent;
+        } else if (curPosition === 0) {
+            textarea.value = curBtn.textContent + textarea.value;
+            textarea.setSelectionRange(curPosition + 1, curPosition + 1);
+        } else if (curPosition > 0 && curPosition < textarea.value.length) {
+            textarea.value = textarea.value.slice(0, curPosition) + curBtn.textContent + textarea.value.slice(curPosition, textarea.length);
+            textarea.setSelectionRange(curPosition + 1, curPosition + 1);
+        }
     }
 
     if (curBtn.id === "CapsLock") {
@@ -141,9 +151,20 @@ setTimeout(() => {
                 || btn.id === "Backquote" || btn.id === "Minus" || btn.id === "Equal"
                 || btn.id === "BracketLeft" || btn.id === "BracketRight"
                 || btn.id === "Backslash" || btn.id === "Semicolon" || btn.id === "Quote"
-                || btn.id === "Comma" || btn.id === "Period" || btn.id === "Slash" || btn.id === "ArrowLeft" 
+                || btn.id === "Comma" || btn.id === "Period" || btn.id === "Slash" || btn.id === "ArrowLeft"
                 || btn.id === "ArrowRight" || btn.id === "ArrowUp" || btn.id === "ArrowDown") {
-                textarea.value += btn.textContent;
+
+                if (curPosition === textarea.value.length) {
+                    textarea.value += btn.textContent;
+                } else if (curPosition === 0) {
+                    textarea.value = btn.textContent + textarea.value;
+                    textarea.setSelectionRange(curPosition + 1, curPosition + 1);
+                } else if (curPosition > 0 && curPosition < textarea.value.length) {
+                    textarea.value = textarea.value.slice(0, curPosition) + btn.textContent + textarea.value.slice(curPosition, textarea.length);
+                    textarea.setSelectionRange(curPosition + 1, curPosition + 1);
+                }
+
+
             } else if (btn.id === "Backspace") {
                 if (curPosition > 0) {
                     textarea.value = textarea.value.slice(0, curPosition - 1) + textarea.value.slice(curPosition, textarea.length);
@@ -156,10 +177,6 @@ setTimeout(() => {
                 textarea.setSelectionRange(curPosition, curPosition);
             } else if (btn.id === "Enter") {
                 textarea.value += "\n";
-                // let colsQuantity = textarea.cols;
-                // let curPosition = textarea.selectionStart;
-                // console.log(colsQuantity, curPosition);
-                //textarea.setSelectionRange(0,0);
             } else if (btn.id === "CapsLock") {
                 if (!isCapsLock) {
                     isCapsLock = true;
@@ -169,6 +186,11 @@ setTimeout(() => {
                     isCapsLock = false;
                     btn.classList.remove("active");
                     updateKeyboard(isCapsLock);
+                }
+            } else if (btn.id === "Space") {
+                if (curPosition > 0 && curPosition < textarea.value.length) {
+                    textarea.value = textarea.value.slice(0, curPosition) + " " + textarea.value.slice(curPosition, textarea.length);
+                    textarea.setSelectionRange(curPosition + 1, curPosition + 1);
                 }
             }
             //else if (btn.id === "ArrowRight") {
