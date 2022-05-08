@@ -1,0 +1,125 @@
+%blackbtn {
+    font-weight: 600;
+    background-color: #222222;
+}
+%greyBtn {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.btnWrap {
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    position: relative;
+    &.wrapbackspace {
+        width: 100px;
+    }
+    &.wraptab {
+        width: 50px;
+    }
+
+    &.wrapdelete {
+        width: 44px;
+    }
+
+    &.wrapcapslock {
+        width: 100px;
+    }
+
+    &.wrapenter {
+        width: 86px;
+    }
+    &.wrapshiftleft {
+        width: 100px;
+    }
+    &.wrapshiftright {
+        width: 86px;
+    }
+    &.wrapspace {
+        width: 330px;
+    }
+
+}
+
+.btn {
+    display: block;
+    position: absolute;
+    @extend %greyBtn;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.7) 5px 5px 5px;
+    transition: all 0.2s;
+    &:hover {
+        background: #747474;
+        cursor: pointer;
+    }
+    &:active {
+        box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 2px;
+        margin-top: 3px;
+        margin-left: 2px;
+    }
+    &.active {
+        background: #747474;
+        box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 2px;
+        margin-top: 3px;
+        margin-left: 2px;
+    }
+    &.backspace {
+        width: 100px;
+        @extend %blackbtn;
+    }
+    &.tab {
+        width: 50px;
+        @extend %blackbtn;
+    }
+
+    &.delete {
+        width: 44px;
+        @extend %blackbtn;
+    }
+
+    &.capslock {
+        width: 100px;
+        @extend %blackbtn;
+    }
+
+    &.enter {
+        width: 86px;
+        @extend %blackbtn;
+    }
+    &.shiftleft {
+        width: 100px;
+        @extend %blackbtn;
+    }
+    &.shiftright {
+        width: 86px;
+        @extend %blackbtn;
+    }
+    &.space {
+        width: 330px;
+    }
+    &.controlleft,
+    &.controlright,
+    &.altleft,
+    &.altright,
+    &.osleft,
+    &.arrowleft,
+    &.arrowright,
+    &.arrowdown,
+    &.arrowup,
+    &.metaleft {
+        @extend %blackbtn;
+    }
+}
