@@ -12,7 +12,6 @@ let btnsArr = [];
 
 window.onload = function () {
     let localStLang = localStorage.getItem("lang");
-
     if (localStLang) {
         lang = localStLang;
     }
@@ -20,14 +19,8 @@ window.onload = function () {
 
 window.onload();
 
-const createHTMLTree = () => {
-    let html = document.querySelector("html");
-    html.setAttribute("lang", "en");
+const addIcon = () => {
     let head = document.querySelector("head");
-    let linkStyle = document.createElement("link");
-    linkStyle.setAttribute("href", "main.css");
-    linkStyle.setAttribute("rel", "stylesheet");
-    head.append(linkStyle);
     let link = document.createElement("link");
     link.setAttribute("rel", "icon");
     link.setAttribute("type", "image/x-icon");
@@ -35,12 +28,9 @@ const createHTMLTree = () => {
     head.append(link); // add favicon
 };
 
-createHTMLTree();
-
 async function createContainer() {
+    addIcon();
     let div = document.createElement("div");
-
-
     div.className = "container";
     div.append(Title()); // add title
     div.append(Textarea()); // add textarea
@@ -70,19 +60,17 @@ document.addEventListener("keydown", function (event) {
         event.key = event.detail.key;
     }
 
-
     const textarea = document.querySelector(".textarea");
+    let curPosition = textarea.selectionStart;
     const btn = Array.from(document.querySelectorAll(".btn"));
     let curBtn = btn.find((item) => item.id === event.code);
     if (curBtn && curBtn.id[0] === "K" && curBtn.id[1] === "e"
-        || curBtn.id[0] === "D" && curBtn.id[1] === "i"
-        || curBtn.id === "Backquote" || curBtn.id === "Minus" || curBtn.id === "Equal"
-        || curBtn.id === "BracketLeft" || curBtn.id === "BracketRight"
-        || curBtn.id === "Backslash" || curBtn.id === "Semicolon" || curBtn.id === "Quote"
-        || curBtn.id === "Comma" || curBtn.id === "Period" || curBtn.id === "Slash") {
+        || curBtn && curBtn.id[0] === "D" && curBtn.id[1] === "i"
+        || curBtn && curBtn.id === "Backquote" || curBtn && curBtn.id === "Minus" || curBtn && curBtn.id === "Equal"
+        || curBtn && curBtn.id === "BracketLeft" || curBtn && curBtn.id === "BracketRight"
+        || curBtn && curBtn.id === "Backslash" || curBtn && curBtn.id === "Semicolon" || curBtn && curBtn.id === "Quote"
+        || curBtn && curBtn.id === "Comma" || curBtn && curBtn.id === "Period" || curBtn && curBtn.id === "Slash") {
         event.preventDefault();
-        let curPosition = textarea.selectionStart;
-
         if (curPosition === textarea.value.length) {
             textarea.value += curBtn.textContent;
         } else if (curPosition === 0) {
@@ -94,50 +82,64 @@ document.addEventListener("keydown", function (event) {
         }
     }
 
-    if (curBtn.id === "CapsLock") {
+    if (curBtn && curBtn.id === "CapsLock") {
         if (!isCapsLock) {
             isCapsLock = true;
             curBtn.classList.add("active");
-            updateKeyboard(isCapsLock);
+            updateKeyboard(isCapsLock, lang);
         } else {
             isCapsLock = false;
             curBtn.classList.remove("active");
-            updateKeyboard(isCapsLock);
+            updateKeyboard(isCapsLock, lang);
         }
     } else {
-        curBtn.classList.add("active");
+        if (curBtn) {
+            curBtn.classList.add("active");
+        }
     }
 
-    if (curBtn.id === "ShiftLeft" || curBtn.id === "ShiftRight") {
+    if (curBtn && curBtn.id === "ShiftLeft" || curBtn && curBtn.id === "ShiftRight") {
         curBtn.classList.add("active");
         isCapsLock ? shiftPush(false, lang) : shiftPush(true, lang);
 
         isShift = true;
     }
 
-    if (isShift && curBtn.id === "AltLeft") {
+    if (curBtn && isShift && curBtn.id === "AltLeft") {
         if (lang === "EN") {
             lang = "RU";
         } else {
             lang = "EN";
         }
     }
+
+    if (curBtn && curBtn.id === "Tab") {
+        event.preventDefault();
+        if (curPosition === textarea.value.length) {
+            textarea.value += "\t";
+        } else if (curPosition === 0) {
+            textarea.value = "\t" + textarea.value;
+            textarea.setSelectionRange(curPosition + 1, curPosition + 1);
+        } else if (curPosition > 0 && curPosition < textarea.value.length) {
+            textarea.value = textarea.value.slice(0, curPosition) + "\t" + textarea.value.slice(curPosition, textarea.length);
+            textarea.setSelectionRange(curPosition + 1, curPosition + 1);
+        }
+    }
+
 });
 
 document.addEventListener("keyup", (event) => {
     const btn = Array.from(document.querySelectorAll(".btn"));
     let curBtn = btn.find((item) => item.id === event.code);
-    if (curBtn.id === "ShiftLeft" || curBtn.id === "ShiftRight") {
+    if (curBtn && curBtn.id === "ShiftLeft" || curBtn && curBtn.id === "ShiftRight") {
         curBtn.classList.remove("active");
         isCapsLock ? shiftPush(true, lang) : shiftPush(false, lang);
         isShift = false;
     }
-    if (curBtn.id !== "CapsLock") {
+    if (curBtn && curBtn.id !== "CapsLock") {
         curBtn.classList.remove("active");
     }
 });
-
-
 
 setTimeout(() => {
     let textarea = document.querySelector(".textarea");
@@ -146,7 +148,6 @@ setTimeout(() => {
     btnsArr.map((btn) => {
         btn.addEventListener("click", () => {
             let textarea = document.querySelector(".textarea");
-            console.log(textarea);
             textarea.focus();
             let curPosition = textarea.selectionStart;
             if (btn && btn.id[0] === "K" && btn.id[1] === "e"
@@ -184,45 +185,36 @@ setTimeout(() => {
                 if (!isCapsLock) {
                     isCapsLock = true;
                     btn.classList.add("active");
-                    updateKeyboard(isCapsLock);
+                    updateKeyboard(isCapsLock, lang);
                 } else {
                     isCapsLock = false;
                     btn.classList.remove("active");
-                    updateKeyboard(isCapsLock);
+                    updateKeyboard(isCapsLock, lang);
                 }
             } else if (btn.id === "Space") {
                 if (curPosition > 0 && curPosition < textarea.value.length) {
                     textarea.value = textarea.value.slice(0, curPosition) + " " + textarea.value.slice(curPosition, textarea.length);
                     textarea.setSelectionRange(curPosition + 1, curPosition + 1);
                 }
+            } else if (btn.id === "Tab") {
+
+                if (curPosition === textarea.value.length) {
+                    textarea.value += "\t";
+                } else if (curPosition === 0) {
+                    textarea.value = "\t" + textarea.value;
+                    textarea.setSelectionRange(curPosition + 1, curPosition + 1);
+                } else if (curPosition > 0 && curPosition < textarea.value.length) {
+                    textarea.value = textarea.value.slice(0, curPosition) + "\t" + textarea.value.slice(curPosition, textarea.length);
+                    textarea.setSelectionRange(curPosition + 1, curPosition + 1);
+                }
             }
-            //else if (btn.id === "ArrowRight") {
-            //     textarea.setSelectionRange(curPosition + 1, curPosition + 1);
-            // } else if (btn.id === "ArrowLeft") {
-            //     if (curPosition > 0) {
-            //         textarea.setSelectionRange(curPosition - 1, curPosition - 1);
-            //     }
-            // } else if (btn.id === "ArrowUp") {
-            //     let rowsQuantity = textarea.value.split("\n");
-            //     if (curPosition > 0 && rowsQuantity.length === 1) {
-            //         textarea.setSelectionRange(0, 0);
-            //     }
-
-            //     if (curPosition > rowsQuantity[0].length && rowsQuantity.length > 1) {
-            //         textarea.setSelectionRange(5, 5);
-            //     }
-            // }
-
         });
     });
 }, 1000);
 
-
 window.onbeforeunload = function () {
     localStorage.setItem("lang", lang);
 };
-
-
 
 window.onbeforeunload();
 
