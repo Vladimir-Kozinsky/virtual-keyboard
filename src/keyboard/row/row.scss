@@ -14,28 +14,67 @@
     margin-bottom: 8px;
 }
 
+.btnWrap {
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    position: relative;
+    &.wrapbackspace {
+        width: 100px;
+    }
+    &.wraptab {
+        width: 50px;
+    }
+
+    &.wrapdelete {
+        width: 44px;
+    }
+
+    &.wrapcapslock {
+        width: 100px;
+    }
+
+    &.wrapenter {
+        width: 86px;
+    }
+    &.wrapshiftleft {
+        width: 100px;
+    }
+    &.wrapshiftright {
+        width: 86px;
+    }
+    &.wrapspace {
+        width: 330px;
+    }
+
+}
+
 .btn {
     display: block;
+    position: absolute;
     @extend %greyBtn;
     width: 40px;
     height: 40px;
     border-radius: 3px;
-    margin-left: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.7) 5px 5px 5px;
+    transition: all 0.2s;
     &:hover {
-        background: #79aa89;
+        background: #747474;
         cursor: pointer;
     }
     &:active {
-        background: #23f368;
-        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 2px;
+        margin-top: 3px;
+        margin-left: 2px;
     }
     &.active {
-        background: #23f368;
-        border-radius: 50px;
+        background: #747474;
+        box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 2px;
+        margin-top: 3px;
+        margin-left: 2px;
     }
     &.backspace {
         width: 100px;
@@ -46,12 +85,12 @@
         @extend %blackbtn;
     }
 
-    &.Delete {
+    &.delete {
         width: 44px;
         @extend %blackbtn;
     }
 
-    &.capsLock {
+    &.capslock {
         width: 100px;
         @extend %blackbtn;
     }
@@ -60,26 +99,27 @@
         width: 86px;
         @extend %blackbtn;
     }
-    &.shiftLeft {
+    &.shiftleft {
         width: 100px;
         @extend %blackbtn;
     }
-    &.shiftRight {
+    &.shiftright {
         width: 86px;
         @extend %blackbtn;
     }
     &.space {
         width: 330px;
     }
-    &.controlLeft,
-    &.controlRight,
-    &.altLeft,
-    &.altRight,
-    &.metaLeft,
-    &.arrowLeft,
-    &.arrowRight,
-    &.arrowDown,
-    &.arrowUp {
+    &.controlleft,
+    &.controlright,
+    &.altleft,
+    &.altright,
+    &.osleft,
+    &.arrowleft,
+    &.arrowright,
+    &.arrowdown,
+    &.arrowup,
+    &.metaleft {
         @extend %blackbtn;
     }
 }
