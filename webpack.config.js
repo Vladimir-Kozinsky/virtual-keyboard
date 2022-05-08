@@ -31,10 +31,10 @@ module.exports = {
     ],
     module: {
         rules: [
-            // {
-            //     test: /\.html$/i,
-            //     loader: "html-loader",
-            // },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+            },
             {
                 test: /\.(png)$/i,
                 type: 'asset/resource',
